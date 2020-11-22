@@ -10,9 +10,9 @@ public class Leitor {
         ArrayList<String> lines = new ArrayList<String>();
         Interpretador i = new Interpretador();
 
-        System.out.println("Insira o path do seu arquivo no formato: 'C:\\Users\\' ");
+        System.out.println(" Insira o path do seu arquivo no formato: 'C:\\' ");
         String path = inputUser.nextLine();
-
+        inputUser.close();
         try {
             File file  = new File(path);
             Scanner sc = new Scanner(file);
@@ -20,10 +20,11 @@ public class Leitor {
             while (sc.hasNextLine()) {
                 lines.add(sc.nextLine());
             }
-            //System.out.println(lines);
+            // System.out.println(lines);
             i.Ler(lines);
+            sc.close();
         }catch (FileNotFoundException e) {
-            System.out.println("Ocorreu um erro. Tente novamente.");
+            System.out.println(" Ocorreu um erro. Tente novamente.");
             e.printStackTrace();
         }
     }
