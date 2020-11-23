@@ -1,0 +1,3 @@
+public Pessoa getPessoa(int index, boolean isActive){
+    // não me interessa o que tem aqui dentro
+}

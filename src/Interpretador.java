@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 
+import org.junit.rules.ExternalResource;
 
-public class Interpretador {
+public class Interpretador extends ExternalResources {
     private ArrayList<String> lines;
     private String linha;
 
